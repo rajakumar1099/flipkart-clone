@@ -1,15 +1,8 @@
-  <div class="header-top-div d-flex justify-content-center">
+<div class="header-top-div d-flex justify-content-center">
   <ul class="container header-container d-flex">
-    <li
-      class="h-100 d-flex flex-column header-category-item"
-      *ngFor="let item of headerCategories"
-      [routerLink]="item.link"
-    >
-      <img
-        class="header-category-item-img"
-        [src]="item.image"
-        [alt]="item.name"
-      />
+    <li class="h-100 d-flex flex-column header-category-item" *ngFor="let item of headerCategories"
+      [routerLink]="item.link">
+      <img class="header-category-item-img" [src]="item.image" [alt]="item.name" />
       <div class="header-category-item-text">{{ item.name }}</div>
     </li>
   </ul>
