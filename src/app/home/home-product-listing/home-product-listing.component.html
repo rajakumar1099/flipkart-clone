@@ -4,33 +4,33 @@
       <div class="h-100">
         <div class="product-view-all">
           <div class="p-2">
-            <h2>Top Offers</h2>
+            <h2>{{productList?.productTitle}}</h2>
             <div class="d-flex justify-content-center">
               <a
-                href="/offers-list/top-offers?screen=dynamic&amp;pk=themeViews%3DEvents-Topoffers%3ADeal-card~widgetType%3DdealCard~contentType%3Dneo&amp;wid=4.dealCard.OMU_4&amp;otracker=hp_omu_Top%2BOffers_4&amp;otracker1=hp_omu_PINNED_neo%2Fmerchandising_Top%2BOffers_NA_wc_view-all_4"
-                >VIEW ALL</a
-              >
+                href="/offers-list/top-offers?screen=dynamic&amp;pk=themeViews%3DEvents-Topoffers%3ADeal-card~widgetType%3DdealCard~contentType%3Dneo&amp;wid=4.dealCard.OMU_4&amp;otracker=hp_omu_Top%2BOffers_4&amp;otracker1=hp_omu_PINNED_neo%2Fmerchandising_Top%2BOffers_NA_wc_view-all_4">VIEW
+                ALL</a>
             </div>
           </div>
-          <img
-            src="../../../assets/product-view-all.webp"
-            alt="product-view-all"
-          />
+          <img src="../../../assets/product-view-all.webp" alt="product-view-all" />
         </div>
       </div>
-      <div class="h-100 product-item-container" #productItemContainer id="product-item-container">
-        <div class="scroll-left-button d-flex justify-content-center">
-          <svg width="14.6" height="24" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" class="_23HYg_"></path></svg>
-        </div>
-        <div class="product-item" *ngFor="let item of productList">
-          <img [src]="item.productImage" alt="monitor">
+      <div class="scroll-left-button d-flex justify-content-center" *ngIf="showLeftArrow" (click)="scrollLeft()">
+        <svg width="14.6" height="24" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" class="_23HYg_"></path>
+        </svg>
+      </div>
+      <div class="h-100 product-item-container" #productItemContainer>
+        <div class="product-item" *ngFor="let item of productList?.products">
+          <img class="product-item-img" [src]="item.productImage" alt="monitor">
           <div class="product-name mt-3">{{item.productName}}</div>
           <div class="product-price">From &#x20b9;{{item.productPrice}}</div>
           <div class="product-brand">{{item.productBrand}}</div>
         </div>
-        <div class="scroll-right-button d-flex justify-content-center" (click)="scrollRight(productItemContainer)">
-          <svg width="14.6" height="24" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" class="_23HYg_"></path></svg>
-        </div>
+      </div>
+      <div class="scroll-right-button d-flex justify-content-center" *ngIf="showRightArrow" (click)="scrollRight()">
+        <svg width="14.6" height="24" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" class="_23HYg_"></path>
+        </svg>
       </div>
     </div>
   </div>

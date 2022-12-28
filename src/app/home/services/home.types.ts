@@ -12,6 +12,11 @@ export interface CarouselImages {
 }
 
 export interface ProductDetails {
+  productTitle: string;
+  products: Products[];
+}
+
+export interface Products {
   productID: string;
   productName: string;
   productImage: string;
