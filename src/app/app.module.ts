@@ -11,6 +11,7 @@ import { CarouselComponent } from './home/carousel/carousel.component';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { HomeProductListingComponent } from './home/home-product-listing/home-product-listing.component';
+import { FooterComponent } from './home/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HomeProductListingComponent } from './home/home-product-listing/home-pr
     PageNotFoundComponent,
     CarouselComponent,
     HomeProductListingComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, NgbCarouselModule],
   providers: [],
