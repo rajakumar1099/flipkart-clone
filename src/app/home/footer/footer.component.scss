@@ -4,68 +4,83 @@
   text-align: left;
 }
 
-footer .row .col {
-  color: #565656;
-  background-color: #fff;
-  text-align: left;
-  margin: 0 auto;
-  padding: 25px;
+.footer-bg {
+  background-color: var(--footer-bg);
 }
 
-footer .header {
-  color: #848484;
+.footer-container {
+  margin-left: 65px;
+  width: 90% !important;
+  padding-top: 40px;
+}
+
+.footer-item {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.footer-item-header {
+  color: #878787;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 9px;
+}
+
+.footer-item-a {
+  line-height: 2;
+  font-size: 13px;
   font-weight: 500;
-  margin-top: 14px;
-  padding: 14px 0;
-  font-size: 14px;
-}
-
-footer .header a {
-  color: #565656;
-  margin-left: 3px;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-footer .header-text {
-  color: #848484;
-  text-transform: uppercase;
-  margin-right: 3px;
-  font-size: 14px;
-}
-
-footer .footer-content a {
-  padding: 0 5px;
-  border-right: 1px solid #333;
+  color: #fff;
+  display: block;
+  font-weight: 400;
   font-size: 12px;
   text-decoration: none;
-  color: #333;
 }
 
-footer .footer-content {
-  margin: 3px 0;
+.footer-address-container {
+  font-size: 12px;
+  white-space: nowrap;
+  border-left: 1px solid #454d5e;
+  padding: 0 25px;
 }
 
-.footer-body-content {
-  line-height: 16px;
-  font-size: 11px;
-  color: #878787;
-  text-align: left;
-  font-family: Roboto, Arial, sans-serif;
-  letter-spacing: 0;
+.footer-address-container-item {
+  font-style: normal;
+  color: #fff;
+  background-color: #172337;
 }
 
-h2 {
-  font-size: 14px;
-  margin-bottom: 10px;
-  line-height: 16px;
-  color: #878787;
-  text-align: left;
-  font-family: Roboto, Arial, sans-serif;
-  letter-spacing: 0;
-  font-weight: bold;
+.footer-address-container-item p {
+  margin-bottom: 0;
 }
 
-::ng-deep .row {
-  --bs-gutter-x: unset;
+p a,
+.footer-bottom-container a {
+  text-decoration: none;
+}
+
+.footer-bottom-container {
+  border-top: 1px solid #454d5e;
+  padding: 25px 0;
+  margin-top: 40px;
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.footer-bottom-icon-text {
+  color: #fff;
+  margin-left: 8px;
+}
+
+.footer-flipkart-text {
+  color: #fff;
 }
