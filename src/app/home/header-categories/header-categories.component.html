@@ -3,7 +3,10 @@
     <li class="h-100 d-flex flex-column header-category-item" *ngFor="let item of headerCategories"
       [routerLink]="item.link">
       <img class="header-category-item-img" [src]="item.image" [alt]="item.name" />
-      <div class="header-category-item-text">{{ item.name }}</div>
+      <div class="d-flex">
+        <div class="header-category-item-text">{{ item.name }}</div>
+        <svg width="5" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="header-category-arrow-svg"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z"></path></svg>
+      </div>
     </li>
   </ul>
 </div>
