@@ -11,21 +11,24 @@ export class HomeProductListingComponent implements OnInit {
   @ViewChild('productItemContainer') public productItemContainer: ElementRef<any> | undefined;
   public showRightArrow: boolean = true;
   public showLeftArrow: boolean = false;
-  private readonly scrollSize = 300;
+  private readonly scrollSize = 500;
   constructor() { }
 
   ngOnInit(): void {
   }
 
   public scrollRight(): void {
-    this.productItemContainer!.nativeElement.scrollLeft += this.scrollSize;
-    this.showRightArrow = this.productItemContainer!.nativeElement.scrollLeft <= 0 + this.scrollSize ? true : false;
-    this.showLeftArrow = this.productItemContainer!.nativeElement.scrollLeft >= 0 ? true : false;
+    var rightScroll = (this.productItemContainer!.nativeElement.scrollLeft += this.scrollSize);
+    console.log(rightScroll);
+
+    this.showRightArrow = true/* !(rightScroll <= this.scrollSize) */
+    this.showLeftArrow = (this.productItemContainer!.nativeElement.scrollLeft >= 0)
+    // console.log(this.productItemContainer!.nativeElement.scrollLeft);
   }
 
   public scrollLeft(): void {
     this.productItemContainer!.nativeElement.scrollLeft -= this.scrollSize;
-    this.showRightArrow = this.productItemContainer!.nativeElement.scrollLeft > 0 ? true : false;
-    this.showLeftArrow = this.productItemContainer!.nativeElement.scrollLeft > this.scrollSize ? true : false;
+    this.showRightArrow = this.productItemContainer!.nativeElement.scrollLeft > 0;
+    this.showLeftArrow = this.productItemContainer!.nativeElement.scrollLeft > this.scrollSize;
   }
 }
