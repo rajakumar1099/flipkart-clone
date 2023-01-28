@@ -1,0 +1,10 @@
+<ngb-carousel #carousel [interval]="4000" [pauseOnHover]="true" [pauseOnFocus]="true" [showNavigationIndicators]="false"
+  [showNavigationArrows]="showCarouselArrows">
+  <ng-template ngbSlide *ngFor="let img of carouselImages; index as i">
+    <a [routerLink]="img?.link" target="_blank" rel="nofollow noopener noreferrer">
+      <div class="picsum-img-wrapper">
+        <img [src]="img?.image" [alt]="img?.id" />
+      </div>
+    </a>
+  </ng-template>
+</ngb-carousel>
